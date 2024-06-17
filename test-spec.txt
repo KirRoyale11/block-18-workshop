@@ -1,0 +1,30 @@
+UNIT TESTS PROMPT 1:
+ "A function called "multiplication" that returns the product of the two input numbers."
+ -Expect multiplication(2,3) to be a number
+ -Expect multiplication(2,3) to be equal to 6
+ -Expect multiplication("b", 3) to be an error
+ -Expect multiplication("b", "c") to be an error
+ -Expect multiplication(2, "c") to be an error
+
+ UNIT TESTS PROMPT 2:
+ "A function called "concatOdds" takes two arrays of integers as arguments. It should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
+Example: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
+...should result in [-1, 1, 3, 9, 15]"
+-Expect concatOdds([3,2], [9,8,7]) to be a single array
+-Expect concatOdds([3,2], [9,8,7]) to consist of numbers
+-Expect concatOdds([3,2], [9,8,7]) to list numbers in ascending order
+-Expect concatOdds([3,2], [9,8,7]) to return only odd numbers
+-Expect concatOdds([3,2], [9,8,7]) to exclude any even numbers
+-Expect concatOdds([3,3,2], [9,9,8,7]) to be [3, 7, 9]
+-Expect concatOdds([2, 2, 4], [6, 8]) to return an empty array
+-Expect concatOdds([true], [3,3,2]) to return an error
+-Expect concatOdds(["7", "8", "9"], [3,3,2]) to return an error
+-Expect concatOdds(true,3,3,2) to return an error
+-Expect concatOdds(3,2,9,8,7) to return an error
+-Expect concatOdds(3,2, [9,8,7]) to return an error
+
+FUNCTIONAL TESTS PROMPT 1:
+"A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user. They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest."
+
+-When a user [does something with some parameters], [some thing should happen]
+
