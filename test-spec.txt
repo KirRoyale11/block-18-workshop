@@ -24,7 +24,28 @@ Example: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
 -Expect concatOdds(3,2, [9,8,7]) to return an error
 
 FUNCTIONAL TESTS PROMPT 1:
-"A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user. They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest."
-
+"A shopping cart checkout feature that allows a user to check out as a guest (without an account), 
+or as a logged-in user. They should be allowed to do either, 
+but should be asked if they want to create an account or log in if they check out as a guest."
+FORMAT:
 -When a user [does something with some parameters], [some thing should happen]
+
+-When a user clicks "Check Out" and they are logged in, they should be taken to a shipping/payment page with pre-loaded info
+associated with their account
+-When a user clicks "Check Out" and they are not logged in, they should receive a prompt asking if they would like to log in or create an account
+-When a user clicks "Create Account" and information is valid, they should receive a "Create Password" prompt
+    -When a user clicks "Confirm Password" and both password fields match, they should continue to a shipping/payment 
+    page with empty inputs
+    -When a user clicks "Confirm Password" and both password fields to not match, they should recieve an error and 
+    be prompted to check their inputs
+    -When a user clicks "Confirm Password" and one or both fields is empty, they should receive an error and be prompted to try again
+-When a user clicks "Create Account" and one or more fields contains the incorrect info type, they should recieve an error
+-When a user clicks "Create Account" and one or more fields is empty, they should receive an error
+-When a user clicks "Continue as Guest", they should be taken to a shipping/payment page with empty inputs
+-When a user clicks "Log In" and they enter correct information, they should be taken to a shipping/payment page
+ with pre-loaded info associated with their account 
+-When a user clicks "Log In" but has filled out an incorrect login or password, 
+they should be shown an error and prompted to sign up if they have not yet.
+
+
 
